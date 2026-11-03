@@ -1,0 +1,7 @@
+{
+  "python": "C:/ComfyUI/custom_nodes/ComfyUI-LATO2/envs/lato2/Scripts/python.exe",
+  "repo": "C:/ComfyUI/custom_nodes/ComfyUI-LATO2/vendor/LATO.2",
+  "ckpt": "D:/models/lato2",
+  "dino_hub_dir": "D:/models/lato2/dinov2",
+  "timeout": 1800
+}

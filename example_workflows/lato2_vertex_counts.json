@@ -1,0 +1,1116 @@
+{
+  "id": "dd54ab80-1ae1-4787-a3d1-cb9828b9b2ba",
+  "revision": 0,
+  "last_node_id": 7,
+  "last_link_id": 3,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LATO2Remesh",
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        274.947265625,
+        362
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "mesh",
+          "name": "mesh",
+          "shape": 7,
+          "type": "MESH,FILE_3D,FILE_3D_GLB,FILE_3D_GLTF,FILE_3D_OBJ,FILE_3D_PLY,FILE_3D_STL",
+          "link": null
+        },
+        {
+          "localized_name": "vertex_count",
+          "name": "vertex_count",
+          "type": "INT",
+          "widget": {
+            "name": "vertex_count"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "model_file",
+          "name": "model_file",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "model_file"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "input_path",
+          "name": "input_path",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "input_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "vflow_steps",
+          "name": "vflow_steps",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "vflow_steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "tflow_steps",
+          "name": "tflow_steps",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "tflow_steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "remove_inner_walls",
+          "name": "remove_inner_walls",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "remove_inner_walls"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "rebuild_surface",
+          "name": "rebuild_surface",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "rebuild_surface"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "mesh",
+          "name": "mesh",
+          "type": "MESH",
+          "links": null
+        },
+        {
+          "localized_name": "model_3d",
+          "name": "model_3d",
+          "type": "FILE_3D_GLB",
+          "links": [
+            1
+          ]
+        },
+        {
+          "localized_name": "glb_path",
+          "name": "glb_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LATO2Remesh"
+      },
+      "widgets_values": [
+        600,
+        42,
+        "fixed",
+        "3d/hydrant.glb",
+        "",
+        "lato2_600",
+        24,
+        50,
+        3,
+        true,
+        true
+      ],
+      "widgets_values_named": {
+        "vertex_count": 600,
+        "seed": 42,
+        "control_after_generate": "fixed",
+        "model_file": "3d/hydrant.glb",
+        "input_path": "",
+        "filename_prefix": "lato2_600",
+        "vflow_steps": 24,
+        "tflow_steps": 50,
+        "cfg": 3,
+        "remove_inner_walls": true,
+        "rebuild_surface": true
+      }
+    },
+    {
+      "id": 2,
+      "type": "Preview3DAdvanced",
+      "pos": [
+        0,
+        430
+      ],
+      "size": [
+        440,
+        520
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model_3d",
+          "name": "model_3d",
+          "type": "FILE_3D_GLB,FILE_3D_GLTF,FILE_3D_FBX,FILE_3D_OBJ,FILE_3D_STL,FILE_3D_USDZ,FILE_3D",
+          "link": 1
+        },
+        {
+          "localized_name": "model_3d_info",
+          "name": "model_3d_info",
+          "shape": 7,
+          "type": "LOAD3D_MODEL_INFO",
+          "link": null
+        },
+        {
+          "localized_name": "camera_info",
+          "name": "camera_info",
+          "shape": 7,
+          "type": "LOAD3D_CAMERA",
+          "link": null
+        },
+        {
+          "localized_name": "viewport_state",
+          "name": "viewport_state",
+          "type": "LOAD_3D",
+          "widget": {
+            "name": "viewport_state"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "model_3d",
+          "name": "model_3d",
+          "type": "FILE_3D",
+          "links": null
+        },
+        {
+          "localized_name": "model_3d_info",
+          "name": "model_3d_info",
+          "type": "LOAD3D_MODEL_INFO",
+          "links": null
+        },
+        {
+          "localized_name": "camera_info",
+          "name": "camera_info",
+          "type": "LOAD3D_CAMERA",
+          "links": null
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Preview3DAdvanced",
+        "Camera Config": {
+          "cameraType": "perspective",
+          "fov": 35,
+          "hasCustomUp": false
+        },
+        "Last Time Model File": "preview3d_advanced_6c361b0d00694f2ab0a2d537b6de7231.glb",
+        "Last Time Model Folder": "temp",
+        "Light Config": {
+          "intensity": 3,
+          "hdri": {
+            "enabled": false,
+            "hdriPath": "",
+            "showAsBackground": false,
+            "intensity": 1
+          }
+        },
+        "Scene Config": {
+          "showGrid": true,
+          "backgroundColor": "#282828",
+          "backgroundImage": "",
+          "backgroundRenderMode": "tiled",
+          "models": [
+            {
+              "position": {
+                "x": 0.00245928922643579,
+                "y": 2.4333652474332954,
+                "z": 0.0008500534864078757
+              },
+              "quaternion": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 5.159276821205576,
+                "y": 5.159276821205576,
+                "z": 5.159276821205576
+              }
+            }
+          ]
+        },
+        "Model Config": {
+          "upDirection": "original",
+          "materialMode": "original",
+          "showSkeleton": false,
+          "gizmo": {
+            "enabled": false,
+            "mode": "translate",
+            "position": {
+              "x": 0.00245928922643579,
+              "y": 2.4333652474332954,
+              "z": 0.0008500534864078757
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 5.159276821205576,
+              "y": 5.159276821205576,
+              "z": 5.159276821205576
+            }
+          }
+        }
+      },
+      "widgets_values": [
+        "",
+        1024,
+        1024
+      ],
+      "widgets_values_named": {
+        "viewport_state": "",
+        "width": 1024,
+        "height": 1024
+      }
+    },
+    {
+      "id": 3,
+      "type": "LATO2Remesh",
+      "pos": [
+        470,
+        0
+      ],
+      "size": [
+        274.947265625,
+        362
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "mesh",
+          "name": "mesh",
+          "shape": 7,
+          "type": "MESH,FILE_3D,FILE_3D_GLB,FILE_3D_GLTF,FILE_3D_OBJ,FILE_3D_PLY,FILE_3D_STL",
+          "link": null
+        },
+        {
+          "localized_name": "vertex_count",
+          "name": "vertex_count",
+          "type": "INT",
+          "widget": {
+            "name": "vertex_count"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "model_file",
+          "name": "model_file",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "model_file"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "input_path",
+          "name": "input_path",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "input_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "vflow_steps",
+          "name": "vflow_steps",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "vflow_steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "tflow_steps",
+          "name": "tflow_steps",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "tflow_steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "remove_inner_walls",
+          "name": "remove_inner_walls",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "remove_inner_walls"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "rebuild_surface",
+          "name": "rebuild_surface",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "rebuild_surface"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "mesh",
+          "name": "mesh",
+          "type": "MESH",
+          "links": null
+        },
+        {
+          "localized_name": "model_3d",
+          "name": "model_3d",
+          "type": "FILE_3D_GLB",
+          "links": [
+            2
+          ]
+        },
+        {
+          "localized_name": "glb_path",
+          "name": "glb_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LATO2Remesh"
+      },
+      "widgets_values": [
+        1500,
+        42,
+        "fixed",
+        "3d/hydrant.glb",
+        "",
+        "lato2_1500",
+        24,
+        50,
+        3,
+        true,
+        true
+      ],
+      "widgets_values_named": {
+        "vertex_count": 1500,
+        "seed": 42,
+        "control_after_generate": "fixed",
+        "model_file": "3d/hydrant.glb",
+        "input_path": "",
+        "filename_prefix": "lato2_1500",
+        "vflow_steps": 24,
+        "tflow_steps": 50,
+        "cfg": 3,
+        "remove_inner_walls": true,
+        "rebuild_surface": true
+      }
+    },
+    {
+      "id": 4,
+      "type": "Preview3DAdvanced",
+      "pos": [
+        470,
+        430
+      ],
+      "size": [
+        440,
+        520
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model_3d",
+          "name": "model_3d",
+          "type": "FILE_3D_GLB,FILE_3D_GLTF,FILE_3D_FBX,FILE_3D_OBJ,FILE_3D_STL,FILE_3D_USDZ,FILE_3D",
+          "link": 2
+        },
+        {
+          "localized_name": "model_3d_info",
+          "name": "model_3d_info",
+          "shape": 7,
+          "type": "LOAD3D_MODEL_INFO",
+          "link": null
+        },
+        {
+          "localized_name": "camera_info",
+          "name": "camera_info",
+          "shape": 7,
+          "type": "LOAD3D_CAMERA",
+          "link": null
+        },
+        {
+          "localized_name": "viewport_state",
+          "name": "viewport_state",
+          "type": "LOAD_3D",
+          "widget": {
+            "name": "viewport_state"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "model_3d",
+          "name": "model_3d",
+          "type": "FILE_3D",
+          "links": null
+        },
+        {
+          "localized_name": "model_3d_info",
+          "name": "model_3d_info",
+          "type": "LOAD3D_MODEL_INFO",
+          "links": null
+        },
+        {
+          "localized_name": "camera_info",
+          "name": "camera_info",
+          "type": "LOAD3D_CAMERA",
+          "links": null
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Preview3DAdvanced",
+        "Camera Config": {
+          "cameraType": "perspective",
+          "fov": 35,
+          "hasCustomUp": false
+        },
+        "Last Time Model File": "preview3d_advanced_8449118950464ad49663a038b6c79ab1.glb",
+        "Last Time Model Folder": "temp",
+        "Light Config": {
+          "intensity": 3,
+          "hdri": {
+            "enabled": false,
+            "hdriPath": "",
+            "showAsBackground": false,
+            "intensity": 1
+          }
+        },
+        "Scene Config": {
+          "showGrid": true,
+          "backgroundColor": "#282828",
+          "backgroundImage": "",
+          "backgroundRenderMode": "tiled",
+          "models": [
+            {
+              "position": {
+                "x": 0.0024133916722690607,
+                "y": 2.4862561099600353,
+                "z": -0.00950290147618471
+              },
+              "quaternion": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 5.05295916115874,
+                "y": 5.05295916115874,
+                "z": 5.05295916115874
+              }
+            }
+          ]
+        },
+        "Model Config": {
+          "upDirection": "original",
+          "materialMode": "original",
+          "showSkeleton": false,
+          "gizmo": {
+            "enabled": false,
+            "mode": "translate",
+            "position": {
+              "x": 0.0024133916722690607,
+              "y": 2.4862561099600353,
+              "z": -0.00950290147618471
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 5.05295916115874,
+              "y": 5.05295916115874,
+              "z": 5.05295916115874
+            }
+          }
+        }
+      },
+      "widgets_values": [
+        "",
+        1024,
+        1024
+      ],
+      "widgets_values_named": {
+        "viewport_state": "",
+        "width": 1024,
+        "height": 1024
+      }
+    },
+    {
+      "id": 5,
+      "type": "LATO2Remesh",
+      "pos": [
+        940,
+        0
+      ],
+      "size": [
+        274.947265625,
+        362
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "mesh",
+          "name": "mesh",
+          "shape": 7,
+          "type": "MESH,FILE_3D,FILE_3D_GLB,FILE_3D_GLTF,FILE_3D_OBJ,FILE_3D_PLY,FILE_3D_STL",
+          "link": null
+        },
+        {
+          "localized_name": "vertex_count",
+          "name": "vertex_count",
+          "type": "INT",
+          "widget": {
+            "name": "vertex_count"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "model_file",
+          "name": "model_file",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "model_file"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "input_path",
+          "name": "input_path",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "input_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "vflow_steps",
+          "name": "vflow_steps",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "vflow_steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "tflow_steps",
+          "name": "tflow_steps",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "tflow_steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "remove_inner_walls",
+          "name": "remove_inner_walls",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "remove_inner_walls"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "rebuild_surface",
+          "name": "rebuild_surface",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "rebuild_surface"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "mesh",
+          "name": "mesh",
+          "type": "MESH",
+          "links": null
+        },
+        {
+          "localized_name": "model_3d",
+          "name": "model_3d",
+          "type": "FILE_3D_GLB",
+          "links": [
+            3
+          ]
+        },
+        {
+          "localized_name": "glb_path",
+          "name": "glb_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LATO2Remesh"
+      },
+      "widgets_values": [
+        3000,
+        42,
+        "fixed",
+        "3d/hydrant.glb",
+        "",
+        "lato2_3000",
+        24,
+        50,
+        3,
+        true,
+        true
+      ],
+      "widgets_values_named": {
+        "vertex_count": 3000,
+        "seed": 42,
+        "control_after_generate": "fixed",
+        "model_file": "3d/hydrant.glb",
+        "input_path": "",
+        "filename_prefix": "lato2_3000",
+        "vflow_steps": 24,
+        "tflow_steps": 50,
+        "cfg": 3,
+        "remove_inner_walls": true,
+        "rebuild_surface": true
+      }
+    },
+    {
+      "id": 6,
+      "type": "Preview3DAdvanced",
+      "pos": [
+        940,
+        430
+      ],
+      "size": [
+        440,
+        520
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model_3d",
+          "name": "model_3d",
+          "type": "FILE_3D_GLB,FILE_3D_GLTF,FILE_3D_FBX,FILE_3D_OBJ,FILE_3D_STL,FILE_3D_USDZ,FILE_3D",
+          "link": 3
+        },
+        {
+          "localized_name": "model_3d_info",
+          "name": "model_3d_info",
+          "shape": 7,
+          "type": "LOAD3D_MODEL_INFO",
+          "link": null
+        },
+        {
+          "localized_name": "camera_info",
+          "name": "camera_info",
+          "shape": 7,
+          "type": "LOAD3D_CAMERA",
+          "link": null
+        },
+        {
+          "localized_name": "viewport_state",
+          "name": "viewport_state",
+          "type": "LOAD_3D",
+          "widget": {
+            "name": "viewport_state"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "model_3d",
+          "name": "model_3d",
+          "type": "FILE_3D",
+          "links": null
+        },
+        {
+          "localized_name": "model_3d_info",
+          "name": "model_3d_info",
+          "type": "LOAD3D_MODEL_INFO",
+          "links": null
+        },
+        {
+          "localized_name": "camera_info",
+          "name": "camera_info",
+          "type": "LOAD3D_CAMERA",
+          "links": null
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Preview3DAdvanced",
+        "Camera Config": {
+          "cameraType": "perspective",
+          "fov": 35,
+          "hasCustomUp": false
+        },
+        "Last Time Model File": "preview3d_advanced_b024eefec8454562b07ae0bfebd32777.glb",
+        "Last Time Model Folder": "temp",
+        "Light Config": {
+          "intensity": 3,
+          "hdri": {
+            "enabled": false,
+            "hdriPath": "",
+            "showAsBackground": false,
+            "intensity": 1
+          }
+        },
+        "Scene Config": {
+          "showGrid": true,
+          "backgroundColor": "#282828",
+          "backgroundImage": "",
+          "backgroundRenderMode": "tiled",
+          "models": [
+            {
+              "position": {
+                "x": -0.0078243509559478,
+                "y": 2.4862561099600353,
+                "z": -0.009512463935973492
+              },
+              "quaternion": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 5.05295916115874,
+                "y": 5.05295916115874,
+                "z": 5.05295916115874
+              }
+            }
+          ]
+        },
+        "Model Config": {
+          "upDirection": "original",
+          "materialMode": "original",
+          "showSkeleton": false,
+          "gizmo": {
+            "enabled": false,
+            "mode": "translate",
+            "position": {
+              "x": -0.0078243509559478,
+              "y": 2.4862561099600353,
+              "z": -0.009512463935973492
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 5.05295916115874,
+              "y": 5.05295916115874,
+              "z": 5.05295916115874
+            }
+          }
+        }
+      },
+      "widgets_values": [
+        "",
+        1024,
+        1024
+      ],
+      "widgets_values_named": {
+        "viewport_state": "",
+        "width": 1024,
+        "height": 1024
+      }
+    },
+    {
+      "id": 7,
+      "type": "MarkdownNote",
+      "pos": [
+        1420,
+        0
+      ],
+      "size": [
+        360,
+        260
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "# LATO.2 at three vertex counts\n\nThe same mesh at 600, 1500 and 3000 vertices. Fewer vertices keep the big forms; more keep the detail (bolts, rims, chains).\n\nPick or upload a mesh in each node (the example uses `hydrant.glb` from `example_workflows/assets`), then run."
+      ],
+      "widgets_values_named": {
+        "text": "# LATO.2 at three vertex counts\n\nThe same mesh at 600, 1500 and 3000 vertices. Fewer vertices keep the big forms; more keep the detail (bolts, rims, chains).\n\nPick or upload a mesh in each node (the example uses `hydrant.glb` from `example_workflows/assets`), then run."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      1,
+      2,
+      0,
+      "FILE_3D_GLB"
+    ],
+    [
+      2,
+      3,
+      1,
+      4,
+      0,
+      "FILE_3D_GLB"
+    ],
+    [
+      3,
+      5,
+      1,
+      6,
+      0,
+      "FILE_3D_GLB"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.75,
+      "offset": [
+        20,
+        40
+      ]
+    }
+  },
+  "version": 0.4
+}

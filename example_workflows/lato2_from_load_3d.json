@@ -1,0 +1,473 @@
+{
+  "id": "96981327-0965-428c-a0cf-8141cd8d2143",
+  "revision": 0,
+  "last_node_id": 4,
+  "last_link_id": 2,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Load3D",
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        420,
+        600
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model_file",
+          "name": "model_file",
+          "type": "COMBO",
+          "widget": {
+            "name": "model_file"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "LOAD_3D",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "mask",
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "localized_name": "mesh_path",
+          "name": "mesh_path",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "normal",
+          "name": "normal",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "camera_info",
+          "name": "camera_info",
+          "type": "LOAD3D_CAMERA",
+          "links": null
+        },
+        {
+          "localized_name": "recording_video",
+          "name": "recording_video",
+          "type": "VIDEO",
+          "links": null
+        },
+        {
+          "localized_name": "model_3d",
+          "name": "model_3d",
+          "type": "FILE_3D",
+          "links": [
+            1
+          ]
+        },
+        {
+          "localized_name": "model_3d_info",
+          "name": "model_3d_info",
+          "type": "LOAD3D_MODEL_INFO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Resource Folder": "",
+        "Node name for S&R": "Load3D"
+      },
+      "widgets_values": [
+        "3d/hydrant.glb",
+        "upload3dmodel",
+        "uploadExtraResources",
+        "clear",
+        "",
+        1024,
+        1024
+      ],
+      "widgets_values_named": {
+        "model_file": "3d/hydrant.glb",
+        "upload 3d model": "upload3dmodel",
+        "upload extra resources": "uploadExtraResources",
+        "clear": "clear",
+        "image": "",
+        "width": 1024,
+        "height": 1024
+      }
+    },
+    {
+      "id": 2,
+      "type": "LATO2Remesh",
+      "pos": [
+        470,
+        0
+      ],
+      "size": [
+        274.947265625,
+        362
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "mesh",
+          "name": "mesh",
+          "shape": 7,
+          "type": "MESH,FILE_3D,FILE_3D_GLB,FILE_3D_GLTF,FILE_3D_OBJ,FILE_3D_PLY,FILE_3D_STL",
+          "link": 1
+        },
+        {
+          "localized_name": "vertex_count",
+          "name": "vertex_count",
+          "type": "INT",
+          "widget": {
+            "name": "vertex_count"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "model_file",
+          "name": "model_file",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "model_file"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "input_path",
+          "name": "input_path",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "input_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "vflow_steps",
+          "name": "vflow_steps",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "vflow_steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "tflow_steps",
+          "name": "tflow_steps",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "tflow_steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "remove_inner_walls",
+          "name": "remove_inner_walls",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "remove_inner_walls"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "rebuild_surface",
+          "name": "rebuild_surface",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "rebuild_surface"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "mesh",
+          "name": "mesh",
+          "type": "MESH",
+          "links": null
+        },
+        {
+          "localized_name": "model_3d",
+          "name": "model_3d",
+          "type": "FILE_3D_GLB",
+          "links": [
+            2
+          ]
+        },
+        {
+          "localized_name": "glb_path",
+          "name": "glb_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LATO2Remesh"
+      },
+      "widgets_values": [
+        1500,
+        42,
+        "fixed",
+        "none",
+        "",
+        "lato2",
+        24,
+        50,
+        3,
+        true,
+        true
+      ],
+      "widgets_values_named": {
+        "vertex_count": 1500,
+        "seed": 42,
+        "control_after_generate": "fixed",
+        "model_file": "none",
+        "input_path": "",
+        "filename_prefix": "lato2",
+        "vflow_steps": 24,
+        "tflow_steps": 50,
+        "cfg": 3,
+        "remove_inner_walls": true,
+        "rebuild_surface": true
+      }
+    },
+    {
+      "id": 3,
+      "type": "Preview3DAdvanced",
+      "pos": [
+        900,
+        0
+      ],
+      "size": [
+        520,
+        600
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model_3d",
+          "name": "model_3d",
+          "type": "FILE_3D_GLB,FILE_3D_GLTF,FILE_3D_FBX,FILE_3D_OBJ,FILE_3D_STL,FILE_3D_USDZ,FILE_3D",
+          "link": 2
+        },
+        {
+          "localized_name": "model_3d_info",
+          "name": "model_3d_info",
+          "shape": 7,
+          "type": "LOAD3D_MODEL_INFO",
+          "link": null
+        },
+        {
+          "localized_name": "camera_info",
+          "name": "camera_info",
+          "shape": 7,
+          "type": "LOAD3D_CAMERA",
+          "link": null
+        },
+        {
+          "localized_name": "viewport_state",
+          "name": "viewport_state",
+          "type": "LOAD_3D",
+          "widget": {
+            "name": "viewport_state"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "model_3d",
+          "name": "model_3d",
+          "type": "FILE_3D",
+          "links": null
+        },
+        {
+          "localized_name": "model_3d_info",
+          "name": "model_3d_info",
+          "type": "LOAD3D_MODEL_INFO",
+          "links": null
+        },
+        {
+          "localized_name": "camera_info",
+          "name": "camera_info",
+          "type": "LOAD3D_CAMERA",
+          "links": null
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Preview3DAdvanced"
+      },
+      "widgets_values": [
+        "",
+        1024,
+        1024
+      ],
+      "widgets_values_named": {
+        "viewport_state": "",
+        "width": 1024,
+        "height": 1024
+      }
+    },
+    {
+      "id": 4,
+      "type": "MarkdownNote",
+      "pos": [
+        470,
+        470
+      ],
+      "size": [
+        400,
+        240
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "# Load 3D into LATO.2\n\n**Load 3D** loads and shows a mesh (its **upload 3d model** button adds one); its **model_3d** output goes into LATO.2's **mesh** input, which overrides the node's own file picker.\n\nAny node that outputs a `MESH` or a 3D file can feed LATO.2 the same way."
+      ],
+      "widgets_values_named": {
+        "text": "# Load 3D into LATO.2\n\n**Load 3D** loads and shows a mesh (its **upload 3d model** button adds one); its **model_3d** output goes into LATO.2's **mesh** input, which overrides the node's own file picker.\n\nAny node that outputs a `MESH` or a 3D file can feed LATO.2 the same way."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      6,
+      2,
+      0,
+      "FILE_3D"
+    ],
+    [
+      2,
+      2,
+      1,
+      3,
+      0,
+      "FILE_3D_GLB"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.75,
+      "offset": [
+        20,
+        40
+      ]
+    }
+  },
+  "version": 0.4
+}
