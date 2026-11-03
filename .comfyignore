@@ -1,0 +1,4 @@
+# Left out of the package the Comfy Registry and ComfyUI Manager install (still in the git repository).
+docs/
+tests/
+.github/

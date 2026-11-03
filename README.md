@@ -41,7 +41,9 @@ This node runs it inside ComfyUI and adds what a usable result needs:
 You need an NVIDIA GPU with CUDA and 8 GB of VRAM, `git`, Python 3.10 or newer to run the installer, about
 13 GB of disk and an internet connection for the first setup.
 
-1. **Get the node.** In ComfyUI Manager, install *ComfyUI-LATO2*, or clone it into `custom_nodes`:
+1. **Get the node.** In ComfyUI Manager, search for *LATO2* and install *ComfyUI-LATO2*; or with
+   [comfy-cli](https://github.com/Comfy-Org/comfy-cli), `comfy node install comfyui-lato2`; or clone it into
+   `custom_nodes`:
 
    ```bash
    cd ComfyUI/custom_nodes

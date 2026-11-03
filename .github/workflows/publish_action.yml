@@ -1,0 +1,31 @@
+name: Publish to Comfy registry
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "pyproject.toml"
+
+permissions:
+  issues: write
+
+jobs:
+  publish-node:
+    name: Publish Custom Node to registry
+    runs-on: ubuntu-latest
+    if: ${{ github.repository_owner == 'sakalond' }}
+    steps:
+      - name: Check for the registry token
+        id: token
+        # Until the REGISTRY_ACCESS_TOKEN secret is set, a version bump is pushed without publishing.
+        run: echo "present=${{ secrets.REGISTRY_ACCESS_TOKEN != '' }}" >> "$GITHUB_OUTPUT"
+      - name: Check out code
+        if: steps.token.outputs.present == 'true'
+        uses: actions/checkout@v4
+      - name: Publish Custom Node
+        if: steps.token.outputs.present == 'true'
+        uses: Comfy-Org/publish-node-action@main
+        with:
+          personal_access_token: ${{ secrets.REGISTRY_ACCESS_TOKEN }}
