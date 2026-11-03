@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-lato2"
 description = "Low-poly remeshing with LATO.2: dense generated meshes (TRELLIS.2, Hunyuan3D, scans) to clean, artist-like low-poly meshes. Windows and Linux, nothing to compile. After installing, run install_lato2.py once (see the README)."
-version = "0.1.0"
+version = "0.1.1"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
 # Nothing for ComfyUI's own environment: LATO.2 runs in its own (install_lato2.py).

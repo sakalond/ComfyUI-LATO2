@@ -20,6 +20,7 @@ import os
 import shutil
 import subprocess
 import sys
+import sysconfig
 import time
 from pathlib import Path
 
@@ -51,15 +52,28 @@ def python_in(env: Path) -> Path:
 
 
 def uv_command() -> list[str]:
+    """How to run uv: the one installed into this Python, this Python's `-m uv`, a uv program on PATH, or uv
+    installed into this Python now. Not a launcher shim on PATH (pyenv-win's uv.bat): it passes the arguments
+    through cmd, which reads the '<' in 'numpy<2.3' as an input redirection."""
+    own = Path(sysconfig.get_path("scripts")) / ("uv.exe" if WINDOWS else "uv")
+    if own.is_file():
+        return [str(own)]
+    if module_uv():
+        return [sys.executable, "-m", "uv"]
     found = shutil.which("uv")
-    if found:
+    if found and not (WINDOWS and found.lower().endswith((".bat", ".cmd"))):
         return [found]
+    step("installing uv")
+    run(sys.executable, "-m", "pip", "install", "--quiet", "uv")
+    return [sys.executable, "-m", "uv"]
+
+
+def module_uv() -> bool:
     try:
         subprocess.run([sys.executable, "-m", "uv", "--version"], check=True, capture_output=True)
+        return True
     except Exception:
-        step("installing uv")
-        run(sys.executable, "-m", "pip", "install", "--quiet", "uv")
-    return [sys.executable, "-m", "uv"]
+        return False
 
 
 def repo():

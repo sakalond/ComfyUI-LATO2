@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1 (2026-11-04)
+
+- `install_lato2.py` runs the uv installed into the Python running it, or that Python's `-m uv`, before a uv on
+  PATH, and never a batch-file shim. On Windows with pyenv, PATH's `uv` is pyenv-win's `uv.bat`, which passes the
+  arguments through cmd: cmd read the `<` in `numpy<2.3` as an input redirection, and the environment step failed
+  with "The system cannot find the file specified".
+
 ## 0.1.0 (2026-11-03)
 
 First release.
